@@ -1,0 +1,181 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  --primary-hue: 210;
+  --gray-hue: 240;
+  --color-primary: hsl(var(--primary-hue), 100%, 50%);
+  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
+  --color-secondary: #ffb116;
+  --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+  --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
+  --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
+  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
+  --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
+  --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
+  --color-gradient-primary: linear-gradient(45deg, rgb(177, 203, 238), rgb(64, 165, 233), rgb(27, 220, 238));
+  --color-gradient-danger: linear-gradient(45deg, rgb(236, 115, 115), rgb(197, 41, 41), rgb(245, 7, 7));
+  --color-gradient-save: linear-gradient(45deg, rgb(115, 236, 125), rgb(54, 197, 41), rgb(7, 245, 7));
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+
+  --transitions: all 500ms ease-in-out;
+  --shadows: 2px 5px 8px rgba(20, 20, 20, 0.75);
+  --shadows-light: 2px 5px 8px rgba(0, 0, 0, 0.555);
+  --glow: 0 0 14px 2px rgb(237 230 52 / 71%);
+
+  --fadeInTop1: fadeInTop 1s ease;
+  --fadeOutTop1: fadeInTop 1s ease reverse;
+  --fade-height-max: 200px;
+
+  --tw-shadow: 0 10px 15px -3px rgba(85, 81, 81, 0.1), 0 4px 6px -4px rgba(63, 60, 60, 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+
+  --components-border-radius: 5px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/********************* New Styles ********************/
+.app {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 1.5rem;
+  margin: 0;
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  z-index: -10;
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("../assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%),
+    radial-gradient(at 97% 21%, rgb(57, 183, 192) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, rgb(58, 181, 253) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, rgb(13, 101, 184) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, rgb(120, 238, 218) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, rgb(67, 135, 138) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+/*********************Responsive Small Devices*******************************/
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
