@@ -1,0 +1,117 @@
+export const medicaments = [
+  {
+    name: "Baize_90",
+    weight: 20,
+    code: "BYNX_90_YHREFTV",
+    image: "localhost:5173/uploads/Baize_90.png",
+  },
+  {
+    name: "Gadget_42",
+    weight: 15,
+    code: "GNXT_42_ZFYTUPL",
+    image: "localhost:5173/uploads/Gadget_42.png",
+  },
+  {
+    name: "Widget_75",
+    weight: 18,
+    code: "WDT_75_PQORMNK",
+    image: "localhost:5173/uploads/Widget_75.png",
+  },
+  {
+    name: "Device_28",
+    weight: 12,
+    code: "DVC_28_KLMNOPQ",
+    image: "localhost:5173/uploads/Device_28.png",
+  },
+  {
+    name: "Tool_51",
+    weight: 14,
+    code: "TL_51_ABCDEFG",
+    image: "localhost:5173/uploads/Tool_51.png",
+  },
+  {
+    name: "Apparatus_63",
+    weight: 22,
+    code: "APP_63_HIJKLMNOP",
+    image: "localhost:5173/uploads/Apparatus_63.png",
+  },
+  {
+    name: "Contraption_88",
+    weight: 19,
+    code: "CTN_88_QRSTUVW",
+    image: "localhost:5173/uploads/Contraption_88.png",
+  },
+];
+
+export const drones = [
+  {
+    serial_number: "rfwe3245",
+    model: "Lightweight",
+    weight: 0,
+    battery: 100,
+    state: "IDLE",
+  },
+  {
+    serial_number: "rfwe4245",
+    model: "Lightweight",
+    weight: 0,
+    battery: 100,
+    state: "IDLE",
+  },
+  {
+    serial_number: "rrfe3245",
+    model: "Lightweight",
+    weight: 200,
+    battery: 90,
+    state: "DELIVERING",
+  },
+  {
+    serial_number: "fdrfg245",
+    model: "Lightweight",
+    weight: 0,
+    battery: 100,
+    state: "IDLE",
+  },
+  {
+    serial_number: "ryhju245",
+    model: "Lightweight",
+    weight: 0,
+    battery: 100,
+    state: "IDLE",
+  },
+  {
+    serial_number: "rhg45y5",
+    model: "Lightweight",
+    weight: 0,
+    battery: 30,
+    state: "RETURNING",
+  },
+  {
+    serial_number: "rfujhyt5",
+    model: "Lightweight",
+    weight: 0,
+    battery: 50,
+    state: "DELIVERED",
+  },
+  {
+    serial_number: "rrfgthj45",
+    model: "Heavyweight",
+    weight: 500,
+    battery: 85,
+    state: "DELIVERING",
+  },
+  {
+    serial_number: "rfhj988045",
+    model: "Middleweight",
+    weight: 400,
+    battery: 100,
+    state: "LOADED",
+  },
+  {
+    serial_number: "egtyhr45hft",
+    model: "Cruiserweight",
+    weight: 300,
+    battery: 99,
+    state: "LOADING",
+  },
+];
