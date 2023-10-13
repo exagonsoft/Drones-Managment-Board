@@ -1,0 +1,62 @@
+.error-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.error-picture {
+    width: 150px;
+    display: flex;
+    align-self: center;
+    animation: tilt linear 4s infinite;
+}
+
+.error-message{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message >h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+@keyframes tilt {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/*****************Responsive Small Devices*****************/
+
+@media screen and (max-width: 640px) {
+    .error-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

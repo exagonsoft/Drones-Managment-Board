@@ -1,30 +1,4 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-body {
   --primary-hue: 210;
   --gray-hue: 240;
   --color-primary: hsl(var(--primary-hue), 100%, 50%);
@@ -56,7 +30,11 @@ body {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
 
   --components-border-radius: 5px;
+}
+
+body {
   margin: 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -91,10 +69,6 @@ button:focus-visible {
     background-color: #ffffff;
   }
 
-  a:hover {
-    color: #747bff;
-  }
-
   button {
     background-color: #f9f9f9;
   }
@@ -109,21 +83,21 @@ button:focus-visible {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  width: 100%;
   height: auto;
-  padding: 0 1.5rem;
+  padding: 0;
   margin: 0;
 }
 
 .main {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   position: fixed;
   display: flex;
   justify-content: center;
-  padding: 120px 24px 160px 24px;
+  
   pointer-events: none;
   z-index: -10;
+  left: 0;
 }
 
 .main:before {
@@ -170,6 +144,39 @@ button:focus-visible {
   filter: blur(100px) saturate(150%);
   top: 80px;
   opacity: 0.15;
+}
+
+.nav-menu-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  background: var(--color-primary);
+  border-radius: var(--components-border-radius);
+  color: var(--color-gray-900);
+  transition: var(--transitions);
+  text-decoration: none;
+}
+
+.nav-menu-item:hover > svg {
+  color:var(--color-gray-500);
+  text-shadow: var(--shadows);
+}
+
+.nav-menu-item:hover > span{
+  color:var(--color-gray-500);
+  text-shadow: var(--shadows);
+}
+
+.nav-menu-item > svg {
+  font-size: larger;
+  font-weight: bolder;
+  transition: var(--transitions);
+}
+
+.nav-menu-item > span {
+  transition: var(--transitions);
 }
 
 /*********************Responsive Small Devices*******************************/

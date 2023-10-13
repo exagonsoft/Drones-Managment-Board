@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import LoaderPage from "./pages/loader/loaderPage";
 import { Route, Routes } from "react-router-dom";
-import { layoutRoute, routes } from "./routes/routes";
+import { errorRoute, layoutRoute, routes } from "./routes/routes";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
               <Route key={index} path={route.path} element={route.element} />
             ))}
           </Route>
+          <Route path={errorRoute.path} element={errorRoute.element} />
         </Routes>
       </Suspense>
     </main>

@@ -1,0 +1,108 @@
+.loader-back {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-gradient {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,
+            255,
+            255,
+            0.2);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    opacity: 0.85;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.loader-wrapper > h1 {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.loader-spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-spinner>img {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.spinner {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border: 6px solid transparent;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, changeColor 5s linear infinite;
+    /* Add color change animation */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        border-top-color: #3498db;
+    }
+
+    25% {
+        border-top-color: #e74c3c;
+    }
+
+    50% {
+        border-top-color: #2ecc71;
+    }
+
+    75% {
+        border-top-color: #f39c12;
+    }
+
+    100% {
+        border-top-color: #3498db;
+    }
+}

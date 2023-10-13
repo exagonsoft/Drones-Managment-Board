@@ -9,10 +9,11 @@ const ErrorPage = lazy(() => import("../pages/error/errorPage"));
 
 
 export const layoutRoute = { path: "/", element: <Layout /> }
+export const errorRoute = { path: "*", element: <ErrorPage /> }
 
 export const routes = [
-    { path: "/dashboard", element: <Dashboard /> },
+    { path: "/", element: <Dashboard /> },
     { path: "/drones", element: <Drones /> },
     { path: "/medications", element: <Medications /> },
-    { path: "*", element: <ErrorPage /> },
+    
 ];
