@@ -50,68 +50,208 @@ export const drones = [
     weight: 0,
     battery: 100,
     state: "IDLE",
+    baggage: [
+      {
+        name: "Baize_90",
+        weight: 20,
+        code: "BYNX_90_YHREFTV",
+        image: "localhost:5173/uploads/Baize_90.png",
+      },
+      {
+        name: "Gadget_42",
+        weight: 15,
+        code: "GNXT_42_ZFYTUPL",
+        image: "localhost:5173/uploads/Gadget_42.png",
+      },
+      {
+        name: "Widget_75",
+        weight: 18,
+        code: "WDT_75_PQORMNK",
+        image: "localhost:5173/uploads/Widget_75.png",
+      },
+    ],
   },
   {
-    serial_number: "rfwe4245",
-    model: "Lightweight",
-    weight: 0,
-    battery: 100,
-    state: "IDLE",
-  },
-  {
-    serial_number: "rrfe3245",
-    model: "Lightweight",
-    weight: 200,
-    battery: 90,
-    state: "DELIVERING",
-  },
-  {
-    serial_number: "fdrfg245",
-    model: "Lightweight",
-    weight: 0,
-    battery: 100,
-    state: "IDLE",
-  },
-  {
-    serial_number: "ryhju245",
-    model: "Lightweight",
-    weight: 0,
-    battery: 100,
-    state: "IDLE",
-  },
-  {
-    serial_number: "rhg45y5",
-    model: "Lightweight",
-    weight: 0,
-    battery: 30,
-    state: "RETURNING",
-  },
-  {
-    serial_number: "rfujhyt5",
-    model: "Lightweight",
-    weight: 0,
-    battery: 50,
-    state: "DELIVERED",
-  },
-  {
-    serial_number: "rrfgthj45",
-    model: "Heavyweight",
-    weight: 500,
-    battery: 85,
-    state: "DELIVERING",
-  },
-  {
-    serial_number: "rfhj988045",
+    serial_number: "uier2734",
     model: "Middleweight",
-    weight: 400,
-    battery: 100,
-    state: "LOADED",
+    weight: 2,
+    battery: 98,
+    state: "LOADING",
+    baggage: [
+      {
+        name: "Tool_51",
+        weight: 14,
+        code: "TL_51_ABCDEFG",
+        image: "localhost:5173/uploads/Tool_51.png",
+      },
+      {
+        name: "Apparatus_63",
+        weight: 22,
+        code: "APP_63_HIJKLMNOP",
+        image: "localhost:5173/uploads/Apparatus_63.png",
+      },
+    ],
   },
   {
-    serial_number: "egtyhr45hft",
+    serial_number: "plsh1234",
     model: "Cruiserweight",
-    weight: 300,
+    weight: 5,
+    battery: 95,
+    state: "LOADED",
+    baggage: [
+      {
+        name: "Baize_90",
+        weight: 20,
+        code: "BYNX_90_YHREFTV",
+        image: "localhost:5173/uploads/Baize_90.png",
+      },
+    ],
+  },
+  {
+    serial_number: "mxzn6789",
+    model: "Heavyweight",
+    weight: 8,
+    battery: 92,
+    state: "DELIVERING",
+    baggage: [
+      {
+        name: "Gadget_42",
+        weight: 15,
+        code: "GNXT_42_ZFYTUPL",
+        image: "localhost:5173/uploads/Gadget_42.png",
+      },
+      {
+        name: "Widget_75",
+        weight: 18,
+        code: "WDT_75_PQORMNK",
+        image: "localhost:5173/uploads/Widget_75.png",
+      },
+    ],
+  },
+  {
+    serial_number: "abcf7652",
+    model: "Lightweight",
+    weight: 1,
+    battery: 97,
+    state: "IDLE",
+    baggage: [
+      {
+        name: "Baize_90",
+        weight: 20,
+        code: "BYNX_90_YHREFTV",
+        image: "localhost:5173/uploads/Baize_90.png",
+      },
+      {
+        name: "Tool_51",
+        weight: 14,
+        code: "TL_51_ABCDEFG",
+        image: "localhost:5173/uploads/Tool_51.png",
+      },
+    ],
+  },
+  {
+    serial_number: "xyzk8932",
+    model: "Middleweight",
+    weight: 3,
     battery: 99,
     state: "LOADING",
+    baggage: [
+      {
+        name: "Widget_75",
+        weight: 18,
+        code: "WDT_75_PQORMNK",
+        image: "localhost:5173/uploads/Widget_75.png",
+      },
+      {
+        name: "Apparatus_63",
+        weight: 22,
+        code: "APP_63_HIJKLMNOP",
+        image: "localhost:5173/uploads/Apparatus_63.png",
+      },
+    ],
   },
+  {
+    serial_number: "klop1298",
+    model: "Cruiserweight",
+    weight: 6,
+    battery: 96,
+    state: "LOADED",
+    baggage: [
+      {
+        name: "Gadget_42",
+        weight: 15,
+        code: "GNXT_42_ZFYTUPL",
+        image: "localhost:5173/uploads/Gadget_42.png",
+      },
+    ],
+  },
+  {
+    serial_number: "wxyz5678",
+    model: "Heavyweight",
+    weight: 9,
+    battery: 91,
+    state: "DELIVERING",
+    baggage: [
+      {
+        name: "Widget_75",
+        weight: 18,
+        code: "WDT_75_PQORMNK",
+        image: "localhost:5173/uploads/Widget_75.png",
+      },
+      {
+        name: "Tool_51",
+        weight: 14,
+        code: "TL_51_ABCDEFG",
+        image: "localhost:5173/uploads/Tool_51.png",
+      },
+    ],
+  },
+  {
+    serial_number: "mnop4321",
+    model: "Lightweight",
+    weight: 4,
+    battery: 93,
+    state: "RETURNING",
+    baggage: [
+      {
+        name: "Baize_90",
+        weight: 20,
+        code: "BYNX_90_YHREFTV",
+        image: "localhost:5173/uploads/Baize_90.png",
+      },
+      {
+        name: "Gadget_42",
+        weight: 15,
+        code: "GNXT_42_ZFYTUPL",
+        image: "localhost:5173/uploads/Gadget_42.png",
+      },
+    ],
+  },
+  {
+    "serial_number": "qrst5678",
+    "model": "Heavyweight",
+    "weight": 7,
+    "battery": 94,
+    "state": "DELIVERED",
+    "baggage": [
+      {
+        "name": "Widget_75",
+        "weight": 18,
+        "code": "WDT_75_PQORMNK",
+        "image": "localhost:5173/uploads/Widget_75.png"
+      },
+      {
+        "name": "Baize_90",
+        "weight": 20,
+        "code": "BYNX_90_YHREFTV",
+        "image": "localhost:5173/uploads/Baize_90.png"
+      },
+      {
+        "name": "Tool_51",
+        "weight": 14,
+        "code": "TL_51_ABCDEFG",
+        "image": "localhost:5173/uploads/Tool_51.png"
+      }
+    ]
+  }
 ];

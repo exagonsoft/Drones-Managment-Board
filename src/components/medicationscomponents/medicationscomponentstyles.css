@@ -1,0 +1,20 @@
+.inline-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--color-gray-300);
+    padding: .5rem;
+    border-radius: var(--components-border-radius);
+}
+
+.inline-card>img {
+    height: 100%;
+    border-radius: var(--components-border-radius);
+}
+
+.inline-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    color: var(--color-gray-950);
+}

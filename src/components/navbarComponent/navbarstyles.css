@@ -4,9 +4,13 @@
     align-items: center;
     padding: .5rem 2rem;
     color: var(--color-gray-100);
-    background: rgba(20, 20, 20, 80%);
+    background: rgba(20, 20, 20, 90%);
     box-shadow: var(--shadows);
     height: 4rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .logo-link {
