@@ -9,7 +9,7 @@ const LoaderPage = () => {
         <div className="loader-gradient" />
     </div>
     <div className="loader-wrapper">
-        <div class="loader-spinner">
+        <div className="loader-spinner">
             <img src={Loader} alt="FlexSport" />
             <div className="spinner"></div>
 

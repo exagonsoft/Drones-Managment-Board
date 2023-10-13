@@ -6,6 +6,7 @@
     color: var(--color-gray-100);
     background: rgba(20, 20, 20, 80%);
     box-shadow: var(--shadows);
+    height: 4rem;
 }
 
 .logo-link {

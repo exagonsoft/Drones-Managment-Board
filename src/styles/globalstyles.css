@@ -30,6 +30,7 @@
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
 
   --components-border-radius: 5px;
+  --containers-border-radius: 10px;
 }
 
 body {
