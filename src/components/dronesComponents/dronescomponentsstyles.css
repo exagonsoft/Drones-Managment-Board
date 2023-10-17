@@ -3,7 +3,7 @@
     flex-direction: column;
     border-radius: var(--containers-border-radius);
     padding: 1rem;
-    background: rgba(20, 20, 20, 90%);
+    background: rgba(0, 0, 0, 90%);
     box-shadow: var(--shadows);
     gap: 1rem;
 }
@@ -22,13 +22,7 @@
     border-radius: var(--components-border-radius);
 }
 
-.drone-list-card-header>svg {
-    cursor: pointer;
-    border: solid 1px var(--color-gray-100);
-    border-radius: var(--components-border-radius);
-    padding: .2rem;
-    transition: var(--transitions);
-}
+
 
 .drone-list-card-header>svg:hover {
     text-shadow: var(--shadows);
@@ -41,24 +35,24 @@
     gap: 1rem;
 }
 
-.drone-list-card-body{
+.drone-list-card-body {
     display: flex;
     justify-content: space-around;
     gap: 1rem;
 }
 
-.drone-list-card-body > img {
+.drone-list-card-body>img {
     width: 6rem;
     border-radius: var(--components-border-radius);
 }
 
-.drone-list-card-body-info{
+.drone-list-card-body-info {
     display: flex;
     flex-direction: column;
     gap: .6rem;
 }
 
-.drone-list-card-body-info-row{
+.drone-list-card-body-info-row {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -66,42 +60,183 @@
     gap: .5rem;
 }
 
-.drone-list-card-body-info-row >span{
+.drone-list-card-body-info-row>span {
     background: var(--color-gray-400);
     padding: .2rem .6rem;
     border-radius: var(--components-border-radius);
 }
 
-.drone-list-card-baggage{
+.drone-list-card-baggage {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
 
-.drone-list-card-baggage-details-menu{
+.drone-list-card-baggage-details-menu {
     display: flex;
     align-items: center;
 }
 
-.drone-list-card-baggage-details-menu > hr{
+.drone-list-card-baggage-details-menu>hr {
     width: 100%;
     height: 2px;
     background: var(--color-gradient-save);
 }
 
-.drone-list-card-baggage-details-menu > svg{
+.drone-list-card-baggage-details-menu>svg {
     color: var(--color-gray-100);
     cursor: pointer;
     font-size: large;
 }
 
-.drone-list-card-baggage-list{
+.drone-list-card-baggage-list {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     margin-top: 1rem;
 }
 
-.expanded-drone-list-card{
+.expanded-drone-list-card {
     grid-row: span 2;
 }
+
+.action-menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100%;
+}
+
+.action-menu > svg {
+    cursor: pointer;
+    border: solid 1px var(--color-gray-100);
+    border-radius: var(--components-border-radius);
+    padding: .2rem;
+    transition: var(--transitions);
+}
+
+.action-menu-body {
+    position: absolute;
+    margin-bottom: -80px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: .5rem;
+    background: var(--color-gray-100);
+    box-shadow: var(--shadows);
+    border-radius: var(--containers-border-radius);
+    transition: var(--transitions);
+    color: black;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.action-menu-body > span {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    padding: .1rem 1rem;
+    border-radius: var(--components-border-radius);
+    background: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transitions);
+}
+
+.action-menu-body > span:hover {
+    box-shadow: var(--shadows);
+    text-shadow: var(--shadows);
+}
+
+/******************Drone Modal Form********************/
+.drone-modal-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: fade-in ease-in-out .3s;
+}
+
+.glass-background {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+    /* Apply a blur effect to the background */
+    border-radius: 1px;
+    /* Optional: Add rounded corners for a softer look */
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.drone-modal-form {
+    position: absolute;
+    top: 10%;
+    z-index: 120;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 80%);
+    color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadows);
+}
+
+.drone-modal-form-header{
+    padding: .5rem 2rem;
+    font-size: .8rem;
+}
+
+.drone-modal-form-header > h1{
+    padding: 0;
+    display: contents;
+}
+
+.drone-modal-form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 640px;
+    padding: 1rem;
+}
+
+.drone-modal-form-body>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-footer>button:nth-child(1) {
+    background: var(--color-gradient-save);
+}
+
+.form-footer>button:nth-child(2) {
+    background: var(--color-gradient-danger);
+}
+
+@keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

@@ -7,7 +7,7 @@
   --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
   --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
   --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
-  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
+  --color-gray-400: #2ea3dd;
   --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
   --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
   --color-gradient-primary: linear-gradient(45deg, rgb(177, 203, 238), rgb(64, 165, 233), rgb(27, 220, 238));
@@ -78,6 +78,14 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input, select, option{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  gap: .2rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -174,6 +182,7 @@ button:focus-visible {
   color: var(--color-gray-900);
   transition: var(--transitions);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-menu-item:hover > svg {

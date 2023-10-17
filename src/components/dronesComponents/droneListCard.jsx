@@ -14,15 +14,30 @@ import MedicationInlineCard from "../medicationscomponents/medicationInlineCard"
 const DronesListCard = (props) => {
   const { serial_number, model, weight, battery, state, baggage } = props;
   const [showDetails, setShowDetails] = useState(false);
+  const [showActionMenu, setShowActionMenu] = useState(false);
 
   const detailsToggle = () => {
     setShowDetails((prev) => !prev);
   };
+
+  const actionMenuToggle = () => {
+    setShowActionMenu((prev) =>!prev);
+  };
+
   return (
-    <div className={`drone-list-card ${showDetails ? 'expanded-drone-list-card' : ''}`}>
+    <div
+      className={`drone-list-card ${
+        showDetails ? "expanded-drone-list-card" : ""
+      }`}
+    >
       <div className="drone-list-card-header">
         <span className="">{serial_number}</span>
-        <GiHamburgerMenu />
+        <div className="action-menu">
+          <GiHamburgerMenu onClick={actionMenuToggle}/>
+          {showActionMenu ? <div className="action-menu-body">
+            <span onClick={() => {props.onEditClick(serial_number); setShowActionMenu(false)}}>Edit</span>
+          </div> : <></>}
+        </div>
       </div>
       <div className="drone-list-card-body">
         <img src={Drone} alt="" />
@@ -58,7 +73,7 @@ const DronesListCard = (props) => {
         </div>
         {showDetails && (
           <div className="drone-list-card-baggage-list">
-            {baggage.map((_item, index) => (
+            {baggage?.map((_item, index) => (
               <MedicationInlineCard
                 key={index}
                 name={_item.name}
