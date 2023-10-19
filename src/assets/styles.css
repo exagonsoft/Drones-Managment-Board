@@ -1,0 +1,24 @@
+.logo {
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(36, 34, 34, 80.8%);
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tip {
+    background-color: #020202;
+    width: fit-content;
+    color: white;
+    box-shadow: 2px 2px 8px gray;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}

@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="../src/main/resources/static/assets/styles.css">
+<link rel="stylesheet" href="./src/assets/styles.css">
  <div class="logo-container">
-    <img src="../src/main/resources/static/assets/logo.png" alt="Drones" width=200px class="logo" />
+    <img src="./src/assets/logo.png" alt="Drones" width=200px class="logo" />
   </div>
 
 # Drone Management Board
@@ -67,7 +67,7 @@ The *Drone Management System* is a comprehensive solution developed for efficien
    ```bash
    https://github.com/exagonsoft/Drones-Managment-Board.git
 
-   cd <project-folder>
+   .\cd Drones-Managment-Board
    ```
 
 
