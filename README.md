@@ -80,10 +80,17 @@ The *Drone Management System* is a comprehensive solution developed for efficien
    .\npm install
    ```
 
-2. Run the Spring Boot application using Maven:
+2. Run the Spring Boot application using Node:
    ```bash
    .\npm run dev
    ```
+   OR
+
+   ```bash
+   .\npm start
+   ```
+
+
 3. Access the application in your web browser at `http://localhost:4173`.
     <div class="tip">
         Tip: UI running at http://localhost:4173
