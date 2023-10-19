@@ -1,0 +1,58 @@
+.history-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.history-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logs-wrapper {
+    display: grid;
+    grid-template-columns: 3;
+    gap: .5rem;
+    width: 100%;
+}
+
+.history-log {
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.history-log > span {
+    text-align: center;
+}
+
+.log-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    background: green;
+    margin-bottom: 1rem;
+}
+
+.log-header>span {
+    text-align: center;
+}
+
+.log-body {
+    display: grid;
+    gap: 1rem;
+}
+
+.log-body>span {
+    text-align: center;
+}

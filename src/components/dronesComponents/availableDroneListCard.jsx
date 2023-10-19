@@ -11,13 +11,24 @@ import {
 
 const AvailableDroneListCard = (props) => {
   const { serial_number, model, weight, battery, state } = props;
+  const [showActionMenu, setShowActionMenu] = useState(false);
+
+  const actionMenuToggle = () => {
+    setShowActionMenu((prev) =>!prev);
+  };
+
   return (
     <div
       className={`drone-list-card `}
     >
       <div className="drone-list-card-header">
         <span className="">{serial_number}</span>
-        <GiHamburgerMenu />
+        <div className="action-menu">
+          <GiHamburgerMenu onClick={actionMenuToggle}/>
+          {showActionMenu ? <div className="action-menu-body">
+            <span onClick={() => {props.onLoadClick(serial_number); setShowActionMenu(false)}}>Load Drone</span>
+          </div> : <></>}
+        </div>
       </div>
       <div className="drone-list-card-body">
         <img src={Drone} alt="" />

@@ -1,0 +1,19 @@
+.medications-section {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.medications-list-header{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width:680px) {
+    .medications-section{
+        grid-template-columns: 1fr;
+    }
+}

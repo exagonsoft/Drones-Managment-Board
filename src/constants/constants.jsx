@@ -43,3 +43,10 @@ export const droneModels = [
   "Cruiserweight",
   "Heavyweight",
 ];
+
+export const notificationType = {
+  success: "SUCCESS",
+  warning: "WARNING",
+  error: "ERROR",
+  info: "INFO",
+}

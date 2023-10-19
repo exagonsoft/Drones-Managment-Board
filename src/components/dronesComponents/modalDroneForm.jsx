@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./dronescomponentsstyles.css";
-import { droneModels, droneStates } from "../../constants/constants";
+import { droneModels, droneStates, notificationType } from "../../constants/constants";
 import { droneModel } from "../../data/models/drone";
 import axios from "../../api/axios";
+import { notify } from "../../messages/notificationsHandler";
 
 const ModalDroneForm = (props) => {
   const [drone, setDrone] = useState(droneModel);
@@ -13,21 +14,24 @@ const ModalDroneForm = (props) => {
   const _batteryRef = useRef();
   const _stateRef = useRef();
 
-  const updateUserData = (value, target) => {
+  const updateDroneData = (value, target) => {
     setDrone((prevDroneData) => ({ ...prevDroneData, [target]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let _res = null;
     try {
       if (props.drone) {
-        let _res = await axios.put(`api/drones/${props.drone.id}`, drone);
+        _res = await axios.put(`api/drones/${props.drone.id}`, drone);
       } else {
-        let _res = await axios.post("api/drones", drone);
+        _res = await axios.post("api/drones", drone);
       }
+      notify("Drone Saved Successfully", notificationType.success);
       closeForm(true);
     } catch (error) {
       console.log(error);
+      notify(error.response.data.message, notificationType.error);
     }
   };
 
@@ -76,17 +80,23 @@ const ModalDroneForm = (props) => {
           </h1>
         </div>
         <div className="drone-modal-form-body">
-          <div className="drone-modal-form-input">
-            <label>Serial Number</label>
-            <input
-              ref={_snRef}
-              type="text"
-              placeholder="Serial Number"
-              onChange={(e) => updateUserData(e.target.value, "serial_number")}
-              required
-              maxLength="100"
-            />
-          </div>
+          {props.drone ? (
+            <></>
+          ) : (
+            <div className="drone-modal-form-input">
+              <label>Serial Number</label>
+              <input
+                ref={_snRef}
+                type="text"
+                placeholder="Serial Number"
+                onChange={(e) =>
+                  updateDroneData(e.target.value, "serial_number")
+                }
+                required
+                maxLength="100"
+              />
+            </div>
+          )}
           <div className="drone-modal-form-input">
             <label>Model</label>
             <select
@@ -96,7 +106,7 @@ const ModalDroneForm = (props) => {
               className=""
               aria-required
               required
-              onChange={(e) => updateUserData(e.target.value, "model")}
+              onChange={(e) => updateDroneData(e.target.value, "model")}
             >
               <option value="">Select Model</option>
               <option value={droneModels[0]}>Lightweight</option>
@@ -113,7 +123,7 @@ const ModalDroneForm = (props) => {
               placeholder="Max Weight"
               max="500"
               required
-              onChange={(e) => updateUserData(e.target.value, "max_weight")}
+              onChange={(e) => updateDroneData(e.target.value, "max_weight")}
             />
           </div>
           <div className="drone-modal-form-input">
@@ -125,7 +135,7 @@ const ModalDroneForm = (props) => {
               required
               max={100}
               onChange={(e) =>
-                updateUserData(e.target.value, "battery_capacity")
+                updateDroneData(e.target.value, "battery_capacity")
               }
             />
           </div>
@@ -139,7 +149,7 @@ const ModalDroneForm = (props) => {
                 className=""
                 aria-required
                 required
-                onChange={(e) => updateUserData(e.target.value, "state")}
+                onChange={(e) => updateDroneData(e.target.value, "state")}
               >
                 <option value="">Select State</option>
                 <option value={droneStates[0]}>Idle</option>

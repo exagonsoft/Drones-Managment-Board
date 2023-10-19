@@ -71,7 +71,7 @@ const DronesListCard = (props) => {
             <FaArrowCircleDown onClick={detailsToggle} />
           )}
         </div>
-        {showDetails && (
+        {showDetails ? (
           <div className="drone-list-card-baggage-list">
             {baggage?.map((_item, index) => (
               <MedicationInlineCard
@@ -79,11 +79,11 @@ const DronesListCard = (props) => {
                 name={_item.name}
                 weight={_item.weight}
                 code={_item.code}
-                image={_item.image}
+                image={_item.imageUrl}
               />
             ))}
           </div>
-        )}
+        ) : <></>}
       </div>
     </div>
   );

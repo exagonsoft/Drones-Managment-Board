@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./dronesstyles.css";
 import DronesListCard from "../../components/dronesComponents/droneListCard";
 import { FaPlus } from "react-icons/fa";
@@ -9,23 +9,14 @@ import { Context } from "../../context/mainContext";
 const DronesPage = () => {
   const [dronesList, setDronesList] = useState([]);
   const [showModalForm, setShowModalForm] = useState(false);
-  const { freezeScreen, unFreezeScreen, eventEmitted } =
-    React.useContext(Context);
+  const { freezeScreen, unFreezeScreen, eventEmitted } = useContext(Context);
   const [editingDrone, setEditingDrone] = useState(null);
 
   const loadDronesList = async () => {
     try {
-      let _res = await axios.get("api/drones");
-      let _iCounter = 0;
-      _res.data?.forEach(async (drone) => {
-        let _droneResponse = await axios.get(
-          `api/drones/medications/${drone.id}`
-        );
-        console.log(_droneResponse.data);
-        _res.data[_iCounter].baggage = _droneResponse.data;
-        _iCounter++;
-      });
-      setDronesList(_res.data);
+      let _res = await axios.get("api/drones/loaded");
+      let _listedDrones = _res.data;
+      setDronesList(_listedDrones);
     } catch (error) {}
   };
 

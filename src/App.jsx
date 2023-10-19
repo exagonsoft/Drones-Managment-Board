@@ -2,10 +2,12 @@ import { Suspense } from "react";
 import LoaderPage from "./pages/loader/loaderPage";
 import { Route, Routes } from "react-router-dom";
 import { errorRoute, layoutRoute, routes } from "./routes/routes";
+import { ToastNotification } from "./messages/notificationsHandler";
 
 function App() {
   return (
     <main className="app">
+      <ToastNotification />
       <div className="main">
         <div className="gradient" />
       </div>
