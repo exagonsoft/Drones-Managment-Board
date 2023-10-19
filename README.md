@@ -78,6 +78,7 @@ The *Drone Management System* is a comprehensive solution developed for efficien
 1. Build the project using NPM:
    ```bash
    .\npm install
+   .\npm install -g serve
    ```
 
 2. Run the Spring Boot application using Node:
